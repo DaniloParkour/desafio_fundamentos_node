@@ -40,8 +40,8 @@ class TransactionsRepository {
       (accumulator, currentValue) => accumulator + currentValue.value,
     ); */
 
-    const sumIncome = 0;
-    const sumOutcome = 0;
+    let sumIncome = 0;
+    let sumOutcome = 0;
 
     // | 'outcome'
 

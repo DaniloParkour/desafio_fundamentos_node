@@ -19,6 +19,11 @@ class CreateTransactionService {
       throw Error('This Kind Of Transaction Not Exists');
     }
 
+    if (type === 'outcome') {
+      if (this.transactionsRepository.getBalance().total < value)
+        throw Error('Balance Value Is Not Enough');
+    }
+
     const transaction = this.transactionsRepository.create({
       title,
       value,
